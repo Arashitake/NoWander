@@ -2,8 +2,10 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
+// 1、安装插件
 Vue.use(VueRouter)
 
+// 2、创建路由
 const routes = [
   {
     path: '/',
@@ -28,4 +30,6 @@ const router = new VueRouter({
   routes
 })
 
+
+// 3、导出
 export default router
