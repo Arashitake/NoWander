@@ -6,7 +6,12 @@ import store from './store'
 Vue.config.productionTip = false
 
 new Vue({
+  el: '#app',
+  components: {
+    App
+  },
   router,
   store,
-  render: function (h) { return h(App) }
+  render: function (h) { return h(App) },
+  template: '<App/>'
 }).$mount('#app')

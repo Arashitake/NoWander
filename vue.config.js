@@ -1,4 +1,5 @@
 module.exports = {
+  publicPath:process.env.NODE_ENV === 'production'?'./':'/',  // 根目录（防止打包后出错）
   // 配置别名
   configureWebpack: {
     resolve: {
