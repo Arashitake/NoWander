@@ -1,55 +1,55 @@
 <template>
   <div id="app">
     <div id="topmargin-header">
-      <tab-bar>
+      <nav-bar>
         <!-- 1、首页图标 -->
-        <tab-bar-item path="/homepage">
+        <nav-bar-item path="/homepage">
           <img slot="item-icon" src="./assets/image/homepage/navigationLogo.png" alt=""/>
-        </tab-bar-item>
+        </nav-bar-item>
         <!-- 2、三个大页面 -->
         <div id="left-options">
-          <tab-bar-item path="/learningWorld">
+          <nav-bar-item path="/learningWorld">
             <div slot="item-text">学习天地</div>
-          </tab-bar-item>
-          <tab-bar-item path="/professionalIntroduction">
+          </nav-bar-item>
+          <nav-bar-item path="/professionalIntroduction">
             <div slot="item-text">专业介绍</div>
-          </tab-bar-item>
-          <tab-bar-item path="/universityLife">
+          </nav-bar-item>
+          <nav-bar-item path="/universityLife">
             <div slot="item-text">大学生活</div>
-          </tab-bar-item>
+          </nav-bar-item>
         </div>
         <!-- 3、搜索框：点击搜索或按下Enter，跳转到搜索页面 -->
         <search path="/searchPage"></search>
 
         <div id="right-options">
-          <tab-bar-item id="wall-option" path="/wall">
+          <nav-bar-item id="wall-option" path="/wall">
             <div slot="item-text">目标墙</div>
-          </tab-bar-item>
+          </nav-bar-item>
           <!-- 登录注册 -->
-          <tab-bar-item id="sign-options" path="/sign">
+          <nav-bar-item id="sign-options" path="/sign">
             <div slot="item-text">
               <button>登录</button>
               <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
               <button>注册</button>
             </div>
-          </tab-bar-item>
+          </nav-bar-item>
         </div>
-      </tab-bar>
+      </nav-bar>
     </div>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import TabBar from 'components/common/tabbar/TabBar.vue';
-  import TabBarItem from 'components/content/mainTabbar/TabBarItem.vue';
+  import NavBar from 'components/common/navbar/NavBar.vue';
+  import NavBarItem from 'components/content/mainNavbar/NavBarItem.vue';
   import Search from 'components/common/search/Search.vue'
 
   export default {
     name: 'app',
     components: {
-      TabBar,
-      TabBarItem,
+      NavBar,
+      NavBarItem,
       Search
     }
   }

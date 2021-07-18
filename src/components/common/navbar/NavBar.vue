@@ -1,29 +1,29 @@
 <template>
-  <div id="tab-bar">
+  <div id="nav-bar">
     <slot></slot>
   </div>
 </template>
 
 <script>
-  import TabBarItem from '../../content/mainTabbar/TabBarItem.vue';
+  import NavBarItem from '../../content/mainNavbar/NavBarItem.vue';
   import Search from '../search/Search.vue';
 
   export default {
-    name: 'TabBar',
+    name: 'NavBar',
     data() {
       return {
 
       }
     },
     components: {
-      TabBarItem,
+      NavBarItem,
       Search
     }
   }
 </script>
 
 <style scoped>
-  #tab-bar {  /*topmargin_box*/
+  #nav-bar {  /*topmargin_box*/
     display: flex;
     position: relative;
     margin: 0 auto 10px;

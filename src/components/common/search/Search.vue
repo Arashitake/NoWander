@@ -3,7 +3,8 @@
     <form action="" class="topmargin_searchBox">
       <div class="topmargin_searchOutsideBox">
         <input type="search" name="" id="topmarginSearch" autocomplete="off" disableautocomplete="off" placeholder="搜索学习经验/资源分享" />
-        <button @click="jumpSearchClick"></button>
+        <!-- click.prevent 阻止默认事件 -->
+        <button @click.prevent="jumpSearchClick"></button>
       </div>
       <!-- 下拉框 -->
       <div id="ComboBox">
@@ -82,11 +83,12 @@
     outline: none;
     background: url(../../../assets/image/homepage/topmargin_search.png) no-repeat;
     background-size: 26px;
+    border-radius: 50%;
+    transition: ease-in-out .3s;
     cursor: pointer;
   }
 
   .topmargin_searchOutsideBox button:hover {
-    border-radius: 50%;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.45);
   }
 

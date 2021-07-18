@@ -1,5 +1,5 @@
 <template>
-  <div class='tab-bar-item' @click="itemClick">
+  <div class='nav-bar-item' @click="itemClick">
     <slot name='item-icon'></slot>
     <!-- 要使用插槽，在外层搞一个标签，用于定义一些其他样式或操作 -->
     <div :class="{active: isActive}">
@@ -10,7 +10,7 @@
 
 <script>
   export default {
-    name: 'TabBarItem',
+    name: 'NavBarItem',
     props: {  // 父子组件的动态传递
       path: String
     },
@@ -31,14 +31,14 @@
 </script>
 
 <style scoped>
-  .tab-bar-item {
+  .nav-bar-item {
     /* flex: 1; */
     /* height: 49px; */
     letter-spacing: 1px;
     text-align: center;
   }
 
-  .tab-bar-item > img {
+  .nav-bar-item > img {
     /* width: px; */
     height: 50px;
     margin: 2px 0 0 10px;
