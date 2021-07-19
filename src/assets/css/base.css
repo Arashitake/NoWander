@@ -20,7 +20,6 @@ body {
     /* 禁止用户鼠标在页面上选中文字、图片等 */
     user-select: none;
     color: var(--color-text);
-    width: 100vw;
 }
 
 a {

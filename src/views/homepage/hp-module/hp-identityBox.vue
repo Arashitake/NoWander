@@ -3,47 +3,49 @@
     <!-- 标志图片 -->
     <div class="homePage_LWid_boxImg" >
       <slot name="idBox-icon"></slot>
-      <!-- <img src="img/homePage_highSchoolStudent_head.png" alt="" /> -->
     </div>
-    <slot name="idBox-text"></slot>
-    <!-- <h3>高中生</h3> -->
+    <div class="idBox-text">
+      <slot name="idBox-text"></slot>
+    </div>
     <br />
     <slot name='idBox-message'></slot>
-    <!-- <ul>
-        <li>高中/高考</li>
-        <li>学习方法/经验</li>
-        <li>资源分享</li>
-    </ul> -->
-    <button>
-        <a href="">进入</a>
-    </button>
-    <a class="homePage_expend">
-        <span class="homePage_plus">+</span>
-        <span class="homePage_minus">-</span>
+    <button class="toLWPath" @click="jumpLWClick">进 入</button>
+    <a class="homePage_expend" @click="idSelected">
+      <span class="homePage_plus">+</span>
+      <span class="homePage_minus">-</span>
     </a>
   </div>
 </template>
 
 <script>
+  import cnObj from '../../../assets/javascript/className';
+
   export default {
     name: 'identityBox',
-    data() {
-      return {
-
+    props: {
+      path: String
+    },
+    methods: {
+      idSelected(e) {
+        //e.target.parentNode.parentNode == '.identityBox'
+        let idBox = e.target.parentNode.parentNode;
+        cnObj.toggleClass(idBox, 'homePage_selected');
+      },
+      jumpLWClick() {
+        this.$router.push(this.path);
       }
     },
     components: {
-
     }
   }
 </script>
 
 <style scoped>
-  .identityBox{
-    /* height: 232px; */
+  .identityBox {
     width: 30%;
-    max-width: 218px;
-    height: 93%;
+    height: 85%;
+    /* max-width: 218px;
+    height: 232px; */
     position: relative;
     margin-left: 38px;
     border-radius: 4px;
@@ -51,80 +53,41 @@
     overflow: hidden;
     box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
   }
-/* ----------------------------------------- */
-  .identityBox .homePage_LWid_boxImg{
-    width: 100px;
-    height: 100px;
-    margin: 20px auto;
-    position: absolute;
-    left: calc(50% - 50px);
-    display: block;
-    z-index: 5;
-    border: 5px solid rgba(255,255,255,.3);
-    border-radius: 50%;
-  }
-
-  /* 头像的扩散动画效果 */
-  .identityBox:hover .homePage_LWid_boxImg{
-    transition: all ease-in-out .8s;
-  }
-/* ----------------------------------------- */
-  .identityBox h3{
-    padding: 15px;
-    position: absolute;
-    top: 110px;
-    left: calc(50% - 58px);
-    font-size: 24px;
-    font-weight: normal;
-    text-align: center;
-    letter-spacing: 6px;
-    color: #fff;
-    z-index: 5;
-    text-shadow: .1px .1px .1px rgba(0,0,0,.8);
-    transition: all ease-in-out .5s;
-  }
-
-  .identityBox:nth-child(3) h3{left: calc(50% - 45px);}
-
-  /* 点击后才出现的部分 */
-  .identityBox ul{
-    margin-top: 400px;
-    margin: 400px 0 25px 50px;
-    line-height: 25px;
-    font-size: 14px;
-    list-style-type: disc;
-    color: #fff;
-    position: absolute;
-    z-index: 10;
-    transition: all ease-in-out .5s;
-  }
-
-  .identityBox ul li{
-    letter-spacing: 2px;
-    font-size: 12.5px;
-  }
 
   /* 点击进入的按钮 */
-  .identityBox button{
+  .toLWPath {
     margin-bottom: 10px;
+    padding: 5px 30px;
     position: absolute;
     bottom: -50px;
-    left: 55px;
+    left: 35px;
     font-size: 12px;
+    font-weight: bold;
     border: none;
     outline: none;
-    background: #fff;
+    background: none;
+    color: #fff;
     border-radius: 4px;
     box-shadow: 1px 1px 10px rgba(0,0,0,.1);
+    border: 1px dotted #fff;
     transition: all ease-in-out .5s;
   }
 
-  .identityBox button > a{
-    padding: 5px 30px;
-    display: inline-block;
-    text-decoration: none;
+  .toLWPath:hover {
+    background: #fff;
     color: #95c9ae;
-    font-weight: bold;
+    cursor: pointer;
+  }
+
+  /* 头像的渐变 */
+  .homePage_LWid_boxImg {
+    transition: all ease-in-out .8s;
+  }
+
+  /* 身份的文字 */
+  .idBox-text {
+    width: 100%;
+    text-align: center;
   }
 
   /* "+" 和 "-" */
@@ -162,8 +125,9 @@
   .identityBox.homePage_selected h3{
     width: 70%;
     top: 28px;
-    left: 12%;
+    left: 15%;
     z-index: 15;
+    text-align: left;
     border-bottom: 1px solid rgba(255,255,255,0.8);
     transition: all ease-in-out .5s;
   }
@@ -211,9 +175,9 @@
 
   .identityBox.homePage_selected .homePage_LWid_boxImg{
     position: absolute;
-    top: -20px;
-    left: -5px;
-    transform: scale(1.5);
+    top: -65px;
+    left: 50px;
+    transform: scale(1.8);
     opacity: 0.5;
     transition: all ease-in-out 1s;
   }
