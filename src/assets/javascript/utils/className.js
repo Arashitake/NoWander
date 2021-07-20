@@ -2,7 +2,8 @@ export default {
   isHasClass,
   addClass,
   removeClass,
-  toggleClass
+  toggleClass,
+  replaceClass
 }
 
 // 判断样式是否存在
@@ -36,3 +37,16 @@ function toggleClass(elm, clsn) {
     addClass(elm, clsn);
   }
 }
+
+// 替换Class：先清空再替换
+function replaceClass(elm, clsn) {
+  if(!isHasClass(elm, clsn)){
+    elm.className = " ".replace(/(^\s*)|(\s*$)/g, "");
+    addClass(elm, clsn);
+  }
+}
+
+
+//  let HLW_position = document.querySelector("#homepage-Learning-World");
+//   let HPI_position = document.querySelector("#homePage_Professional_Introduction");
+//   let HUL_position = document.querySelector("#homePage_University_Life");

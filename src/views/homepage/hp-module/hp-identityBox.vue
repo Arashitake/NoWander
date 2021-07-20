@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  import cnObj from '../../../assets/javascript/className';
+  import cnObj from '../../../assets/javascript/utils/className';
 
   export default {
     name: 'identityBox',

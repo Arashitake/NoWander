@@ -1,5 +1,5 @@
 <template>
-  <div class="homePage_Professional_Introduction">
+  <div id="homePage_Professional_Introduction">
     <div class="homePage_PI_subjectBg"></div>
       <div class="homePage_PI_title">
         <h1 id="homePage_Professional_Introduction_target">专业介绍</h1>
@@ -31,12 +31,12 @@
 
 <style scoped>
   /* ————————————————————— 专业介绍 ————————————————————————— */
-  .homePage_Professional_Introduction{
+  #homePage_Professional_Introduction{
     width: 1200px;
-    height: 800px;
+    height: 750px;
     margin: 0 auto;
     display: flex;
-    /* border: 1px solid #0ff; */
+    /* border: 1px solid #00f; */
   }
 
   .homePage_PI_subjectBg{

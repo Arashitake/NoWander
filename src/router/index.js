@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+// import  from './constUrl'
+
 const homepage = () => import("../views/homepage/homepage.vue");
 const learningWorld = () => import("../views/learningWorld/learningWorld.vue");
 const professionalIntroduction = () => import("../views/professionalIntroduction/professionalIntroduction.vue");
@@ -33,30 +35,37 @@ const routes = [
   },
   { // 首页
     path: '/homepage',
+    name: 'homepage',
     component: homepage
   },
   { // 学习天地
     path: '/learningWorld',
+    name: 'learningWorld',
     component: learningWorld
   },
   { // 专业介绍
     path: '/professionalIntroduction',
+    name: 'professionalIntroduction',
     component: professionalIntroduction
   },
   { // 大学生活
     path: '/universityLife',
+    name: 'universityLife',
     component: universityLife
   },
   { // 搜索结果页面
     path: '/searchPage',
+    name: 'searchPage',
     component: searchPage
   },
   { // 目标墙
     path: '/wall',
+    name: 'wall',
     component: wall
   },
   { // 登录/注册
     path: '/sign',
+    name: 'sign',
     component: sign
   }
 
@@ -74,8 +83,8 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  // base: process.env.BASE_URL，应用的基路径，默认值为'/'
-  base: '/nowander/',
+  base: process.env.BASE_URL, //应用的基路径，默认值为'/'
+  // base: '/',
   routes
 })
 

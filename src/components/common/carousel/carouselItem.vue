@@ -1,13 +1,12 @@
 <template>
-  <div>
-    learningWorld
-    <div class="lw2"></div>
+  <div class="carousel-img">
+    <slot name='carousel-img'></slot>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'learningWorld',
+    name: 'carouselItem',
     data() {
       return {
 
@@ -20,9 +19,5 @@
 </script>
 
 <style scoped>
-  .lw2 {
-    width: 200px;
-    height: 2000px;
-    border: 1px solid #f00;
-  }
+
 </style>

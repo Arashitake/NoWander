@@ -1,5 +1,5 @@
 <template>
-  <div class="HP_textPart">
+  <div id="HP_textPart">
     <p>
       在未来，你想做什么，成为什么，该做什么。<br />
       在这里，你可以探索出答案。
@@ -26,7 +26,7 @@
 
 <style scoped>
 /* —————————————————————— 首页文本区域 —————————————————————————— */
-  .HP_textPart {
+  #HP_textPart {
     width: 1200px;
     height: 300px;
     margin: 0 auto;
@@ -34,7 +34,7 @@
     /* border: 1px solid #0f0; */
   }
 
-  .HP_textPart > p {
+  #HP_textPart > p {
     line-height: 40px;
     position: absolute;
     left: 35px;

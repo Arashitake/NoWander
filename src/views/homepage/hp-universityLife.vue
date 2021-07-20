@@ -1,5 +1,5 @@
 <template>
-  <div class="homePage_University_Life">
+  <div id="homePage_University_Life">
     <div class="HUL_txtBox">
       <h1 id="homePage_University_Life_target">大学生活</h1>
       <p>
@@ -31,12 +31,14 @@
 
 <style scoped>
   /* ————————————————————— 大学生活 ————————————————————————— */
-  .homePage_University_Life{
+  #homePage_University_Life{
     max-width: 1600px;
     width: 100%;
+    height: 450px;
     margin: 0 auto;
+    padding-top: 20px;
     position: relative;
-    /* border: 1px solid #ff0; */
+    /* border: 1px solid #f00; */
   }
 
   .HUL_txtBox{
@@ -47,7 +49,7 @@
     /* border: 1px solid #0f0; */
   }
 
-  .homePage_University_Life h1 {
+  #homePage_University_Life h1 {
     margin-top: 28px;
     color: #333;
     font-size: 40px;
@@ -55,7 +57,7 @@
     letter-spacing: 4px;
   }
 
-  .homePage_University_Life p {
+  #homePage_University_Life p {
     margin-top: 32px;
     line-height: 30px;
     font-size: 18px;
@@ -81,7 +83,7 @@
     cursor: pointer;
   }
 
-  .homePage_University_Life img{
+  #homePage_University_Life img{
     width: 100%;
     position: absolute;
     top: 78px;

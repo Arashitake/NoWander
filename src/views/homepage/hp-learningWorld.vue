@@ -1,5 +1,5 @@
 <template>
-  <div id="lw">
+  <div id="homepage-Learning-World">
     <lw-text/>
     <div id="outside-background">
       <div class="homePage_LW_identity">
@@ -60,7 +60,10 @@
 </script>
 
 <style scoped>
-
+  #homepage-Learning-World {
+    padding-bottom: 20px;
+    /* border: 1px solid #0f0; */
+  }
 
   /* ——————————— 身份该有的功能 ————————————————— */
   #outside-background {

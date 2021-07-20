@@ -1,6 +1,13 @@
+// const path = require("path");
+// function resolve(dir) {
+//   return path.join(__dirname, dir);
+// }
+
 module.exports = {
-  publicPath:process.env.NODE_ENV === 'production'?'./':'/',  // 根目录（防止打包后出错）
-  // 配置别名
+  publicPath: process.env.NODE_ENV === 'production'?'./':'/',  // 根目录（防止打包后出错）
+  outputDir: 'dist',      // 打包后的目录名称
+  assetsDir: 'assets',    // 静态资源目录名称
+  // parallel: false,
   configureWebpack: {
     resolve: {
       alias: {
