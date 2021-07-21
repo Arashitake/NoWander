@@ -1,15 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-// import  from './constUrl'
+import {
+  homepage,
+  learningWorld,
+  professionalIntroduction,
+  universityLife,
+  sign,
+  wall,
+  searchPage,
+  highSchool,
+  university
+} from './constUrl.js';
 
-const homepage = () => import("../views/homepage/homepage.vue");
-const learningWorld = () => import("../views/learningWorld/learningWorld.vue");
-const professionalIntroduction = () => import("../views/professionalIntroduction/professionalIntroduction.vue");
-const universityLife = () => import("../views/universityLife/universityLife.vue");
-const sign = () => import("../views/sign/sign.vue");
-const wall = () => import("../views/wall/wall.vue")
-const searchPage = () => import("../views/searchPage/searchPage.vue");
 
 // 1、安装插件
 Vue.use(VueRouter);
@@ -41,7 +44,19 @@ const routes = [
   { // 学习天地
     path: '/learningWorld',
     name: 'learningWorld',
-    component: learningWorld
+    component: learningWorld,
+    children: [
+      {
+        path: 'highSchool',
+        name: 'highSchool',
+        component: highSchool
+      },
+      {
+        path: 'university',
+        name: 'university',
+        component: university
+      }
+    ]
   },
   { // 专业介绍
     path: '/professionalIntroduction',
@@ -69,16 +84,7 @@ const routes = [
     component: sign
   }
 
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: function () {
-  //     return import(/* webpackChunkName: "about" */ '../views/About.vue')
-  //   }
-  // }
+
 ]
 
 const router = new VueRouter({

@@ -18,7 +18,7 @@
 body {
     font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
     /* 禁止用户鼠标在页面上选中文字、图片等 */
-    user-select: none;
+    /* user-select: none; */
     color: var(--color-text);
 }
 

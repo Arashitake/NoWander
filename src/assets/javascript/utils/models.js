@@ -5,7 +5,6 @@ function slowToTop()
   let time = setInterval(function(){
     let fromTop = document.body.scrollTop || document.documentElement.scrollTop;  // 当前位置
     let speed = Math.floor(-fromTop/5);   // 滑动速度
-    console.log(fromTop);
     if(fromTop == 0){   // 滑动顶部
       clearInterval(time);
       return;
@@ -38,17 +37,30 @@ function slowToTarget(btn) {
   }
 }
 
-// 判断是哪个按钮，对应的对象是谁
-function judgmentBtn(btn) {
-  let target = null;  // 点击的按钮的目的对象
+// 判断当前对应的序列号，num为当前序号
+function takeIndex(click, len) {
   let num = 0;      // 获取点击的序列号
-  while(num != 3) {
-    if(btn == btn.parentNode.children[num]){
+  while(num != len) {
+    if(click == click.parentNode.children[num]){
       break;
     } else {
       num++;
     }
   }
+  return num;
+}
+
+// 判断是哪个按钮，对应的对象是谁
+function judgmentBtn(btn) {
+  let target = null;  // 点击的按钮的目的对象
+  let num = takeIndex(btn, 3);      // 获取点击的序列号
+  // while(num != 3) {
+  //   if(btn == btn.parentNode.children[num]){
+  //     break;
+  //   } else {
+  //     num++;
+  //   }
+  // }
   // 对应的位置-对应顺序
   if(num == 0) {
     target = document.querySelector("#homepage-Learning-World");
@@ -92,5 +104,6 @@ export default {
   slowToTop,
   slowToTarget,
   scrollStype,
-  sidebarStatus
+  sidebarStatus,
+  takeIndex
 }

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import NavBarItem from '../../content/mainNavbar/NavBarItem.vue';
+  import NavBarItem from '../../content/mainbar/NavBarItem.vue';
   import Search from '../search/Search.vue';
 
   export default {

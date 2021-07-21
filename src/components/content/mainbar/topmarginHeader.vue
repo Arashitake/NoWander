@@ -64,8 +64,10 @@
   #topmargin-header {
     width: 100%;
     min-width: 1200px;
-    margin: 0 auto;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, .1);
+    height: 55px;
+    margin: 0 auto 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .15);
+    background: #fff;
   }
 
   /* 三个大页面 */
