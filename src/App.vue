@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import topmarginHeader from './components/content/mainbar/topmarginHeader';
+  import topmarginHeader from './components/content/mainbar/topmarginHeader.vue';
 
   export default {
     name: 'app',

@@ -13,22 +13,12 @@ import {
   university
 } from './constUrl.js';
 
+//解决路由跳转原路由或者刷新出错
+import {JumpOrRefreshError} from './vue-router-config.js';
+JumpOrRefreshError(VueRouter);
 
 // 1、安装插件
 Vue.use(VueRouter);
-
-//解决路由跳转原路由或者刷新出错
-// replace：跳转后无法返回
-const originalReplace = VueRouter.prototype.replace;
-VueRouter.prototype.replace = function replace(location) {
-  return originalReplace.call(this, location).catch(err => err);
-};
-
-// push：跳转后可以返回
-const originalPush = VueRouter.prototype.push;
-VueRouter.prototype.push = function push(location) {
-  return originalPush.call(this, location).catch(err => err);
-}
 
 // 2、创建路由
 const routes = [

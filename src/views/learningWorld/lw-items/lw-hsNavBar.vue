@@ -1,6 +1,6 @@
 <template>
-  <div class="LearningWorld_nav">
-    <div class="LearningWorld_navPlate">
+  <div class="learning-world-nav">
+    <div class="learning-world-nav-plate">
       <ul>
         <li>高中</li>
         <li>
@@ -23,7 +23,7 @@
         </li>
       </ul>
     </div>
-    <div class="LearningWorld_navPlate">
+    <div class="learning-world-nav-plate">
       <ul>
         <li>了解更多</li>
         <li>
@@ -38,7 +38,6 @@
       </ul>
     </div>
   </div>
-  <!-- <img src="../../../assets/image/learningWorld/" alt=""> -->
 </template>
 
 <script>
@@ -57,7 +56,7 @@
 
 <style scoped>
   /* ——————————————————————— 导航板块 ———————————————————————— */
-  .LearningWorld_nav{
+  .learning-world-nav{
     width: 720px;
     height: 210px;
     margin: 35px auto 0;
@@ -65,15 +64,14 @@
   }
 
   /* 各个板块信息 */
-  .LearningWorld_navPlate{
-    width: 1200px;
+  .learning-world-nav-plate{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     /* border: 1px solid #0000ff; */
   }
 
-  .LearningWorld_navPlate > ul{
+  .learning-world-nav-plate > ul{
     height: 50px;
     line-height: 50px;
     margin: 0 30px 18.6px 4px;
@@ -89,32 +87,32 @@
     background-size: 27px;
   }
 
-  .LearningWorld_navPlate > ul:nth-child(1){
+  .learning-world-nav-plate > ul:nth-child(1){
     background-image: url(../../../assets/image/learningWorld/LearningWorld_HS_highSchool.png);
   }
 
-  .LearningWorld_navPlate > ul:nth-child(2){
+  .learning-world-nav-plate > ul:nth-child(2){
     background-image: url(../../../assets/image/learningWorld/LearningWorld_HS_gk.png);
   }
 
-  .LearningWorld_navPlate:nth-child(2) > ul{
+  .learning-world-nav-plate:nth-child(2) > ul{
     background-image: url(../../../assets/image/learningWorld/LearningWorld_HS_knowMore.png);
     background-size: 32px;
   }
 
-  .LearningWorld_navPlate > ul li{
+  .learning-world-nav-plate > ul li{
     padding: 0 10px;
     font-size: 14px;
     /* border: 1px solid #f00; */
   }
 
-  .LearningWorld_navPlate > ul li a{
+  .learning-world-nav-plate > ul li a{
     text-decoration: none;
     color: #666;
     letter-spacing: 1.5px;
   }
 
-  .LearningWorld_navPlate > ul li:nth-child(1){
+  .learning-world-nav-plate > ul li:nth-child(1){
     padding-right: 16px;
     font-size: 14px;
     font-weight: bold;
@@ -122,7 +120,7 @@
     /* border: 1px solid #f00; */
   }
 
-  .LearningWorld_navPlate > ul li a:hover{
+  .learning-world-nav-plate > ul li a:hover{
     color: #81cbbf;
   }
 </style>

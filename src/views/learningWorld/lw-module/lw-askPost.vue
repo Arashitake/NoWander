@@ -2,13 +2,13 @@
   <div class="askPost">
     <h2>问贴</h2>
     <div class="LearningWorld-toAskBox">
-      <!-- 右边上下滑动Part -->
+      <!-- 左边上下滑动Part -->
       <div class="LearningWorld-slideBox">
         <div>
           <askpost-slide-box/>
         </div>
       </div>
-      <!-- 文章及其他内容Part -->
+      <!-- 问贴主要内容Part -->
       <div class="LearningWorld-TA-mainBox">
         <div class="askpost-content-box">
           <askpost-item></askpost-item>
@@ -45,7 +45,11 @@
           for(let i = 1; i < askpostContentBox.children.length; i++) {
             classObj.removeClass(askpostContentBox.children[i], 'postAppear');
           }
+          e.target.innerHTML = '查看更多';
+        } else {
+          e.target.innerHTML = '点击收起';
         }
+
         // 点击"查看更多"，出现与否
         classObj.toggleClass(askpostContentBox, 'appear');
       }
@@ -88,7 +92,7 @@
   /* ——————————————— 滑动盒子 ————————————————— */
   .LearningWorld-slideBox {
     width: 280px;
-    margin: 0 10px 0 0;
+    margin: 0 10px;
     /* border: 1px solid #f00; */
   }
 

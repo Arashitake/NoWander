@@ -25,7 +25,8 @@
         modelsObj.slowToTop();
       },
       slowTo(e) {   // 类似于跳转锚点
-        modelsObj.slowToTarget(e.target);
+        let target = modelsObj.judgmentBtn(e.target); // 获取要跳转的目的地
+        modelsObj.slowToTarget(target);
       },
       scrollStype() { // 在哪一片区域就显示在哪一片区域
         let btnList = document.querySelector('.slowToTop').children[0];   // 按钮 ul

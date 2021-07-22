@@ -13,9 +13,8 @@ function slowToTop()
   },30);
 }
 
-// 点击后缓慢到达所在位置
-function slowToTarget(btn) {
-  let target = judgmentBtn(btn);    // 跳转目标地
+// 点击后缓慢到达所在位置：target 跳转目标地
+function slowToTarget(target) {
   if(target) {
     let time = setInterval(function(){
       let fromTop = document.body.scrollTop || document.documentElement.scrollTop;  // 当前位置
@@ -103,6 +102,7 @@ function sidebarStatus(sidebar) {
 export default {
   slowToTop,
   slowToTarget,
+  judgmentBtn,
   scrollStype,
   sidebarStatus,
   takeIndex

@@ -43,7 +43,7 @@
     },
     methods: {
       JumptoWriting() {
-        let LWwriting = document.querySelector('.LearningWorld_learning_experience');
+        let LWwriting = document.querySelector('.learning-world-article');
         modelsObj.slowToTarget(LWwriting);
       }
     },
