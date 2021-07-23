@@ -36,6 +36,9 @@
 
   export default {
     name: 'askpostSlideBox',
+    props: {
+      path: String
+    },
     data() {
       return {
 
@@ -125,4 +128,11 @@
 
   #toAskBox_coil1{left: 81px;}
   #toAskBox_coil2{left: 177px;}
+
+  /* 跳转的图标 */
+  .LearningWorld-toWriting {
+    height: inherit;
+    background: url(../../../assets/image/learningWorld/content/backTop3.png) 156px 19px no-repeat;
+    background-size: 15px 17px;
+  }
 </style>

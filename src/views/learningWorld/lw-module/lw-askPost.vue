@@ -122,7 +122,7 @@
   }
 
   .appear {
-    height: auto !important;
+    height: 965px;
   }
 
   /* ———————— 查看更多 ———————— */

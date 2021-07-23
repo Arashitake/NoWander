@@ -1,9 +1,12 @@
 <template>
-  <div class="LearningWorld_TA_askPost" @click="showClick">
-    <h3>{{message.title}}</h3>
-    <p>{{message.summary}}</p>
+  <div class="LearningWorld_TA_askPost" @click.stop="showClick">
+  <!-- 跳转到askPostShow问帖显示页面 -->
+    <router-link to="/user/askPostShow">
+      <h3 @click="askPostShowClick">{{msg.title}}</h3>
+    </router-link>
+    <p>{{msg.summary}}</p>
     <ul class="LearningWorld_TA_comment">
-      <li v-for="(item, index) in message.comments">第 {{index+1}} 楼: {{item}}</li>
+      <li v-for="(item, index) in msg.comments">第 {{index+1}} 楼: {{item}}</li>
     </ul>
   </div>
 </template>
@@ -14,9 +17,12 @@
 
   export default {
     name: 'askpostItem',
+    props: {
+      path: String
+    },
     data() {
       return {
-        message: {
+        msg: {
           title: '新高考。应该怎样选科，怎样选课又是最合理的？',
           summary: `2020北京第一届新高考小白鼠。目前6选3科目基本确定历史和地理。只在化学与政治间纠结了。
             1.新高考赋分制，避强趋弱，我化学高一没好好学，现在追悔莫及，不知以后是否能赶上比我聪明还比我努力的人。
@@ -47,6 +53,9 @@
           if(i != num)
             classObj.removeClass(this.$el.parentNode.children[i], 'postAppear');
         }
+      },
+      askPostShowClick() {  // 跳转页面
+        this.$router.push(this.path);
       }
     },
     components: {
@@ -80,11 +89,11 @@
 
   .LearningWorld_TA_askPost h3 {
     display: inline-block;
-    padding: 20px 0 0 25px;
+    margin: 20px 0 0 25px;
     color: #343434;
     font-size: 19px;
     letter-spacing: 2px;
-    /* border: 1px solid #f00; */
+    border: 1px solid #f00;
   }
 
   .LearningWorld_TA_askPost h3:hover {color: #81cbbf;}

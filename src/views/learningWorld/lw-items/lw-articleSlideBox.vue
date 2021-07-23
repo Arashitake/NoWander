@@ -103,4 +103,10 @@
     box-shadow: -1px 1px 5px rgba(0, 0, 0, .35);
   }
 
+  /* 跳转的图标 */
+  .LearningWorld_toAsk {
+    height: inherit;
+    background: url(../../../assets/image/learningWorld/content/backTop1.png) 156px 19px no-repeat;
+    background-size: 15px 17px;
+  }
 </style>

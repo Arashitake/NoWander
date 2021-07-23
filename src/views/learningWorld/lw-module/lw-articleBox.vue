@@ -1,7 +1,7 @@
 <template>
   <div class="learning-world-article">
     <h2>文章</h2>
-      <div class="learning-world_contentbox">
+      <div class="learning-world-contentbox">
         <!-- 文章主要内容 Part -->
         <div class="learning-world-rightbox">
           <div class="tag-switch-mainbox">
@@ -37,6 +37,8 @@
         let articleContentBox = e.target.previousElementSibling;
         if(!classObj.isHasClass(articleContentBox, 'tag-switch-list-appear')) {
           e.target.innerHTML = '点击收起';
+        } else {
+          e.target.innerHTML = '查看更多';
         }
         // 点击"查看更多"，出现与否
         classObj.toggleClass(articleContentBox, 'tag-switch-list-appear');
@@ -69,7 +71,7 @@
   }
 
   /* ——————— 左边文章及其他内容Part ————————— */
-  .learning-world_contentbox {
+  .learning-world-contentbox {
     /* height: 856px; */
     display: flex;
     padding: 20px 0 25px 0;
@@ -78,13 +80,9 @@
     /* border: 1px solid #0f0; */
   }
 
-  .learning-world-rightbox {
-    padding: 0 20px 0 15px;
-    /* border: 1px solid #0f0; */
-  }
-
   /* ————— 切换栏内 ——————— */
   .tag-switch-mainbox {
+    padding: 0 20px 0 15px;
     height: 800px;
     overflow: hidden;
     transition: all ease-in-out .3s;
@@ -108,7 +106,7 @@
 
   /* 点击后显示 */
   .tag-switch-list-appear {
-    height: auto !important;
+    height: 1180px;
   }
 
 /* ——————————————— 滑动盒子 ————————————————— */

@@ -6,6 +6,9 @@ import {
   learningWorld,
   professionalIntroduction,
   universityLife,
+  user,
+  askPostShow,
+  articleShow,
   sign,
   wall,
   searchPage,
@@ -72,13 +75,30 @@ const routes = [
     path: '/sign',
     name: 'sign',
     component: sign
+  },
+  { // 用户 user
+    path: '/user',
+    name: 'user',
+    component: user,
+    children: [
+      { // 问帖显示页面
+        path: 'askPostShow',
+        name: 'askPostShow',
+        component: askPostShow
+      },
+      { // 文章显示页面
+        path: 'articleShow',
+        name: 'articleShow',
+        component: articleShow
+      }
+    ]
   }
 
 
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   base: process.env.BASE_URL, //应用的基路径，默认值为'/'
   // base: '/',
   routes

@@ -7,7 +7,6 @@
     </ul>
     <div :class='currentIndex==index?"current":""' :key='item.id' v-for='(item,index) in list'>
       <article-item v-for="(i, j) in item.abbData" :msg="i"/>
-      <!-- <img :src="item.path" alt=""> -->
     </div>
   </div>
 </template>
@@ -108,7 +107,7 @@
   /* —————————————————————— 切换栏 —————————————————————————— */
   #LearningWorld_LE_optionBox {
     display: flex;
-    margin: 0 -10px 20px -10px;
+    margin: 0 -10px 18px -10px;
     padding: 0 0 5px 10px;
     list-style: none;
     /* border-bottom: 2px solid rgba(165, 165, 165, .3); */
@@ -118,7 +117,7 @@
   #LearningWorld_LE_optionBox > li {
     padding: 0 5px;
     margin-right: 30px;
-    line-height: 40px;
+    line-height: 45px;
     font-size: 17px;
     text-shadow: .1px .1px .2px rgba(0, 0, 0,0.6);
     cursor: pointer;

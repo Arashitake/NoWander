@@ -7,7 +7,9 @@
       <li class="LearningWorld-toPosition">
         <slot name="jump-position"></slot>
       </li>
-      <li class="LearningWorld-returnTopBtn" @click="JumptoLWTop">回到顶部</li>
+      <li class="LearningWorld-returnTopBtn" @click="JumptoLWTop">
+        <div>回到顶部</div>
+      </li>
     </ul>
   </div>
 </template>
@@ -61,19 +63,20 @@
   .LearningWorld-TA-slideBox > ul > li:nth-child(2),
   .LearningWorld-TA-slideBox > ul > li:nth-child(3) {
     /* width: 262px; */
-    width: 100%;
     margin-left: 0;
-    padding: 17px 0;
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
     text-align: center;
     /* border-radius: 4px; */
     border-top: 1px solid #e8e8e8;
     cursor: pointer;
     transition-duration: 0.3s;
-    background: url(../../../assets/image/learningWorld/content/backTop3.png) 156px 19px no-repeat;
-    background-size: 15px 17px;
+    /* border: 1px solid #0f0; */
   }
 
-  .LearningWorld-TA-slideBox > ul > li:nth-child(3) {
+  .LearningWorld-TA-slideBox > ul > li:nth-child(3) > div {
+    height: inherit;
     background: url(../../../assets/image/learningWorld/content/backTop2.png) 174px 19px no-repeat;
     background-size: 16px 18px;
   }
