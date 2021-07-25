@@ -6,21 +6,12 @@
       <slot name="box-top-text"></slot>
       <slot name="box-top-img"></slot>
     </div>
-    <li id="showNewNav1">
-      <a href=""></a>
-    </li>
-    <li id="showNewNav2">
-      <a href=""></a>
-    </li>
-    <li id="showNewNav3">
-      <a href=""></a>
-    </li>
-    <li id="showNewNav4">
-      <a href=""></a>
-    </li>
-    <li id="showNewNav5">
-      <a href=""></a>
-    </li>
+    <div class="li-items">
+      <slot name="li-items"></slot>
+    </div>
+    <!-- <li v-for="(item, index) in list">
+      <a href="">{{item}}</a>
+    </li> -->
   </ul>
 </div>
 </template>
@@ -30,8 +21,10 @@
     name: 'otherRelatedBox',
     data() {
       return {
-
       }
+    },
+    methods: {
+
     },
     components: {
 
@@ -62,7 +55,7 @@
     border-radius: 10px 10px 0 0;
   }
 
-  .otherRelatedBox .box-top p{
+  .otherRelatedBox .box-top p {
     position: absolute;
     top: 14px;
     left: 103px;
@@ -87,10 +80,10 @@
   }
 
   .otherRelatedBox ul li a{
-    width: 170px;
+    width: 265px;
     height: 46px;
     line-height: 46px;
-    padding-left: 46px;
+    padding: 0 20px;
     display: inline-block;
     color: #333333;
     font-size: 15px;
@@ -98,6 +91,7 @@
     overflow:hidden;
     text-overflow:ellipsis;
     white-space:nowrap;
+    /* border: 1px solid #f00; */
   }
 
   .otherRelatedBox ul li:hover {

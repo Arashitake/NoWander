@@ -7,6 +7,10 @@
           <p>最新问贴</p>
         </div>
         <img class="slidebox-leaf" slot="box-top-img" src="../../../assets/image/showPage/answerPosts_leafg.png"/>
+        <!-- 其他问贴或文章的title模块 -->
+        <li slot="li-items" v-for="(item, index) in list">
+          <a href="">{{item}}</a>
+        </li>
       </other-related-box>
     </div>
     <div class="waiting-answer">
@@ -16,6 +20,10 @@
           <p>等你回答</p>
         </div>
         <img class="slidebox-leaf" slot="box-top-img" src="../../../assets/image/showPage/answerPosts_leafy.png"/>
+        <!-- 其他问贴或文章的title模块 -->
+        <li slot="li-items" v-for="(item, index) in list">
+          <a href="">{{item}}</a>
+        </li>
       </other-related-box>
     </div>
   </div>
@@ -28,7 +36,7 @@
     name: 'showSlideBox',
     data() {
       return {
-
+        list: [1,2,3,4,5]
       }
     },
     components: {

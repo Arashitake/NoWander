@@ -93,7 +93,7 @@
     color: #343434;
     font-size: 19px;
     letter-spacing: 2px;
-    border: 1px solid #f00;
+    /* border: 1px solid #f00; */
   }
 
   .LearningWorld_TA_askPost h3:hover {color: #81cbbf;}

@@ -1,6 +1,5 @@
 <template>
   <div>
-    用户个人界面
     <router-view></router-view>
   </div>
 </template>
